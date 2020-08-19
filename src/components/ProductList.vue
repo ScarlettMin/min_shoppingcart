@@ -6,7 +6,7 @@
         src="https://i.imgur.com/JfPpwOA.gif"
       >
       <ul v-else>
-        <li v-for="product in products" v-bind:key="product">
+        <li v-for="product in products" :key="product">
           {{product.title}} - {{product.price | currency}} - {{product.inventory}}
           <button
             :disabled="!productIsInStock(product)"
